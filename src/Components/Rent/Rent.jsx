@@ -42,6 +42,17 @@ const Rent = () => {
                             required
                         />
                     </div>
+                    <div className="flex-1">
+                        <label className="block text-sm font-medium mb-1">your location</label>
+                        <input
+                            type="text"
+                            value={dropoff}
+                            onChange={(e) => setDropoff(e.target.value)}
+                            placeholder="type location"
+                            className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
+                            required
+                        />
+                    </div>
 
                     {/* Submit Button */}
                     <div className="flex items-end">
