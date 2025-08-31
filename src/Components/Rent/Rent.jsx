@@ -13,7 +13,7 @@ const Rent = () => {
         <div className="w-full flex justify-center -mt-15 relative z-10">
             <div className="bg-white shadow-lg rounded-xl p-6 w-[90%] md:w-[700px]">
                 <h2 className="text-xl font-bold mb-4">
-                    Rent ukil
+                    Options
                 </h2>
 
                 <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
