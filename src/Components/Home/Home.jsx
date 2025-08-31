@@ -6,7 +6,7 @@ import Accordion from '../Accordion/Accordion'
 
 const Home = () => {
   return (
-    <div className='py-20'>
+    <div>
       <Banner></Banner>
      
       {/* <Rent></Rent> */}

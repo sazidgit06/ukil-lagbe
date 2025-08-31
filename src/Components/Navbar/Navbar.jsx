@@ -4,8 +4,8 @@ import { FaCaretDown } from 'react-icons/fa';
 
 const Navbar = () => {
     return (
-        <header className='bg-gradient-to-l from-violet-900 via-violet-800 to-violet-900 text-white'>
-            <nav className='fixed bg-black/30 z-[9999] w-full px-5 flex items-center justify-between py-2 h-[75px]'>
+        <header className='text-white'>
+            <nav className='fixed bg-black/90 z-[9999] w-full px-5 flex items-center justify-around py-2'>
                 {/* Logo section */}
                 <div className="text-2xl text-white">
                     <a href="#">
@@ -15,9 +15,9 @@ const Navbar = () => {
                 </div>
                 {/* Dekstop view section */}
                 <div>
-                    <ul className='flex gap-4 items-center'>
+                    <ul className='flex gap-4 items-center hidden lg:block lg:flex'>
                         <li className='group relative cursor-pointer'>
-                            <a href="#" className='flex items-center gap-[2px] h-[75px]'>
+                            <a href="#" className='flex items-center gap-[2px] lg:h-[75px]'>
                                 Home
                                 <span>
                                     <FaCaretDown className='transition-all duration-200 group-hover:rotate-180'></FaCaretDown>
@@ -39,17 +39,13 @@ const Navbar = () => {
                                     <FaCaretDown className='transition-all duration-200 group-hover:rotate-180'></FaCaretDown>
                                 </span>
                             </a>
-                            {/* dropdown full width section */}
-                            <div className='absolute left-0 rounded-b-2xl z-[9999] p-2 bg-gray-100 text-black w-full hidden group-hover:block shadow-md'>
-                                <div className='grid grid-cols-3 gap-5'>
-                                    <div className='overflow-hidden'>
-                                        <img className='rounded-b-md max-h-[300px] w-full object-fill' src="https://picsum.photos/seed/picsum/200/300" alt="" />
-                                    </div>
-                                    <div className='col-span-2'>
-                                        <h2 className='text-2xl font-bold'>Best selling</h2>
-                                        <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quos repellat molestias expedita accusantium eos esse iure iste cumque aliquid.</p>
-                                    </div>
-                                </div>
+                            {/* dropdown section */}
+                            <div className='absolute hidden z-[9999] w-[150px] bg-gray-100 p-2 text-black group-hover:block rounded-md'>
+                                <ul className='space-y-3'>
+                                    <li className='p-2 hover:bg-violet-300/30 rounded-md'>Home</li>
+                                    <li className='p-2 hover:bg-violet-300/30 rounded-md'>About us</li>
+                                    <li className='p-2 hover:bg-violet-300/30 rounded-md'>Privacy policy</li>
+                                </ul>
                             </div>
                         </li>
                         <li>About us</li>
@@ -58,8 +54,8 @@ const Navbar = () => {
                                 <BiPhoneCall className='text-2xl w-[40px] h-[40px] rounded-md p-2 text-white bg-primary/70 hover:bg-primary' />
                             </div>
                             <div>
-                                <p>Call us on</p>
-                                <p>+88 01713 726345</p>
+                                <p className='text-sm'>Call us on</p>
+                                <p className='text-sm'>+88 01713 726345</p>
                             </div>
                         </li>
                         <BiSolidSun className='text-2xl' />
